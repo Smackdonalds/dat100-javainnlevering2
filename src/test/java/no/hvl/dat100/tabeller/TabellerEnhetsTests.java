@@ -35,7 +35,7 @@ class TabellerEnhetsTests {
 
 	@Test
 	void testtilStreng() {
-
+	
 		assertEquals("[1,4,6]", Tabeller.tilStreng(tabell1));
 		assertEquals("[1]", Tabeller.tilStreng(tabell2));
 		assertEquals("[]", Tabeller.tilStreng(tabell3));
@@ -43,13 +43,18 @@ class TabellerEnhetsTests {
 
 	@Test
 	void testSummer() {
+			// Lagt til print for å se resultat
+		System.out.println(Tabeller.summer(tabell1));
+
 		assertEquals(11, Tabeller.summer(tabell1));
 		assertEquals(1, Tabeller.summer(tabell2));
 		assertEquals(0, Tabeller.summer(tabell3));
 	}
-
+	
 	@Test
 	void testfinnesTall() {
+
+
 		assertTrue(Tabeller.finnesTall(tabell1, 1));
 		assertTrue(Tabeller.finnesTall(tabell1, 4));
 		assertTrue(Tabeller.finnesTall(tabell1, 6));
